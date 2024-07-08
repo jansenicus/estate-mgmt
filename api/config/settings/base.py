@@ -19,16 +19,15 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 
 APPS_DIR = BASE_DIR / "core_apps"
 
+local_env_file = path.join('BASE_DIR', ".envs", ".env.local")
+
+if path.isfile(local_env_file):
+    load_dotenv(local_env_file)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&mjja5lhg1rt4ex3ysj8v3#=v0p4lwoeffckr)82!qqs_*3nzj'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
